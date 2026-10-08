@@ -12,12 +12,12 @@ typedef struct Student {
 } Student;
 
 
-void addStudent();
+void addStudents(Student *s);
 void editStudent(Student *student);
 void deleteStudent(Student *student);
 void searchStudent(Student *student);          // By name or role number
 void displayAll();             // Sorted by role number
-void saveToFile(FILE *file);
+void saveToFile(FILE *file, Student *s);
 void loadFromFile(FILE *file);
 
 #endif // !STUDENT
