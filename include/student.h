@@ -9,15 +9,15 @@ typedef struct Student {
 	int age;
 	char *class;
 	float marks;
-};
+} Student;
 
 
 void addStudent();
-void editStudent();
-void deleteStudent();
-void searchStudent();
-void displayAll();
-void saveToFile(FILE file);
-void loadFromFile(FILE file);
+void editStudent(Student *student);
+void deleteStudent(Student *student);
+void searchStudent(Student *student);          // By name or role number
+void displayAll();             // Sorted by role number
+void saveToFile(FILE *file);
+void loadFromFile(FILE *file);
 
 #endif // !STUDENT
