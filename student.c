@@ -4,12 +4,6 @@
 #include <stdlib.h>
 
 void addStudents(Student *student) {
-	Student s;
-	s.age = student->age;
-	s.role = student->role;
-	s.name = student->name;
-	s.class = student->class;
-	s.marks = student->marks;
 
 	char *filename = "students.txt";
 
@@ -18,7 +12,9 @@ void addStudents(Student *student) {
 		fprintf(stderr, "Failed to open the file: %s\n", filename);
 		exit(1);
 	}
-	saveToFile(file, &s);
+	saveToFile(file, student);
+
+	fclose(file);
 }
 
 

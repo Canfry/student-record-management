@@ -1,2 +1,2 @@
-Chris, 1, 43, Math, 14.20
-John, 5, 19, Law, 13.75
+Chris, 1, 43, Maths, 4.10
+Chris, 2, 25, Litterature, 3.70
