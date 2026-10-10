@@ -1,2 +1,19 @@
 Chris, 1, 43, Maths, 4.10
 Chris, 2, 25, Litterature, 3.70
+
+test, 4, 4, test, 4.40
+test2, 2, 2, test2, 2.50
+test3, 3, 3, test3, 3.30
+test4, 4, 4, test4, 4.40
+test5, 5, 5, test5, 5.50
+test6, 6, 6, test6, 6.60
+sldf, 5, 5, sdf, 5.50
+lsdkfj, 5, 5, lsdkfjl, 5.50
+dsflkjdlfkjdlskfj, 44, 44, lsdkfj;sldkfjsdlf, 4.40
+sldkfjldklfjsdlkj, 8, 8, sldkfjdlkfjdlsfkjdkfj, 8.80
+dslkfjdf, 6, 6, sdlkfjdlkf, 6.60
+lsdkfj, 2, 2, sdlkfj, 2.20
+dlkfjdkf, 0, 5, j, 0.00
+fry, 4, 4, dlfkjdl, 4.40
+dlkfj, 4, 4, ldkfj, 4.40
+dlkfj, 5, 5, dfdf, 5.50

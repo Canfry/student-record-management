@@ -9,32 +9,40 @@ int main(int argc, char **argv) {
 	int role = 0;
 	char class[1024];
 	float marks = 0.0f;
+	char again = '\0';
 	
+	int loop = 1;
+
 	printf("Add student(s): \n");
-	printf("Enter a name: ");
-	scanf("%s", name);
 
-	printf("Enter an age: ");
-	scanf("%d", &age);
+	while (loop) {		
+		printf("Do you want to add student? (y/n): ");
+		scanf("%c", &again);
+		if (again == 'n') {
+			loop = 0;
+			break;
+		} else if (again == 'y') {
+		
+			printf("Enter a name: ");
+			scanf("%s", name);
 
-	printf("Enter a role: ");
-	scanf("%d", &role);
+			printf("Enter an age: ");
+			scanf("%d", &age);
 
-	printf("Enter a class: ");
-	scanf("%s", class);
+			printf("Enter a role: ");
+			scanf("%d", &role);
 
-	printf("Enter marks: ");
-	scanf("%f", &marks);
+			printf("Enter a class: ");
+			scanf("%s", class);
 
-	Student s1 = {role, name, age, class, marks};
-	addStudents(&s1);
-	
-	printf("%s\n", name);
-	
-	/* Student s = {1, "Chris", 43, "Math", 14.2}; */
-	/* Student s2 = {5, "John", 19, "Law", 13.75}; */
-	/* addStudents(&s); */
-	/* addStudents(&s2); */
+			printf("Enter marks: ");
+			scanf("%f", &marks);
+
+			Student s1 = {role, name, age, class, marks};
+			addStudents(&s1);
+			again = '\0';
+		}
+	}
 	
 	return 0;
 }
