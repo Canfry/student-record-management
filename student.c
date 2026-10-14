@@ -21,7 +21,24 @@ void addStudents(Student *student) {
 void editStudent(Student *student);
 void deleteStudent(Student *student);
 void searchStudent(Student *student);
-void displayAll();
+
+
+void displayAll() {
+	
+	char *line = NULL;
+	size_t linecap = 0;
+	ssize_t linelen;
+	
+	char *filename = "students.txt";
+	FILE *file = fopen(filename, "r");
+	if (file == NULL) {
+		fprintf(stderr, "Failed to open file: %s\n", filename);
+		exit(1);
+	}
+	while ((linelen = getline(&line, &linecap, file)) > 0) {
+		fwrite(line, linelen, 1, stdout);
+	}
+}
 
 
 void saveToFile(FILE *file, Student *s) {

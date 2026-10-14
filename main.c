@@ -38,18 +38,20 @@ int main(int argc, char **argv) {
 				
 		printf("What do you want to do next? Type the number: \n");
 		//scanf("%d", &choice);
+		printf("\n");
 
 		printf("1. Add student\n");
 		printf("2. List all student\n");
 		printf("3. Exit\n");
 
 		scanf("%d", &choice);
+		printf("\n");
 
 	    switch (choice) {
 		case 1:
 			continue;
 		case 2:
-			printf("List\n");
+			displayAll(); 
 		case 3:
 			loop = 0;
 			break;
