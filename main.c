@@ -1,13 +1,15 @@
 #include "student.h"
 #include <stdio.h>
+#include <string.h>
 
+# define MAX_SIZE 255
 
 int main(int argc, char **argv) {
 
-	char name[1024];
+	char name[MAX_SIZE];
 	int age = 0;
 	int role = 0;
-	char class[1024];
+	char class[MAX_SIZE];
 	float marks = 0.0f;
 	int choice = 1;
 	
@@ -16,10 +18,13 @@ int main(int argc, char **argv) {
 	printf("Add student(s): \n");
 
 	while (loop) {
-		//char again = '\0';
 		
 		printf("Enter a name: ");
-		scanf("%s", name);
+		if (fgets(name, MAX_SIZE, stdin) == NULL) {
+			scanf("%s", "anonymous");
+		} else {
+			name[strcspn(name, "\n")] = '\0';
+		}
 
 		printf("Enter an age: ");
 		scanf("%d", &age);
@@ -37,7 +42,6 @@ int main(int argc, char **argv) {
 		addStudents(&s1);
 				
 		printf("What do you want to do next? Type the number: \n");
-		//scanf("%d", &choice);
 		printf("\n");
 
 		printf("1. Add student\n");

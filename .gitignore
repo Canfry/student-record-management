@@ -2,6 +2,8 @@ build/
 
 main.dSYM/
 
+main
+
 .students.txt
 
 *.o
