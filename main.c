@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 		
 		printf("Enter a name: ");
 		if (fgets(name, MAX_SIZE, stdin) == NULL) {
-			scanf("%s", "anonymous");
+			continue;
 		} else {
 			name[strcspn(name, "\n")] = '\0';
 		}
@@ -57,6 +57,7 @@ int main(int argc, char **argv) {
 		case 2:
 			displayAll(); 
 		case 3:
+			
 			loop = 0;
 			break;
 		}
